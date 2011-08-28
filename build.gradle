@@ -1,15 +1,15 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-apply plugin: 'templates'
 apply plugin: 'scala'
 
-group = org.tonyb
-
-repositories {
-	mavenCentral()
-}
+group = 'org.tonyb'
 
 scalaVersion = '2.9.0'
+scalatestVersion = '1.6.1'
+
+// Use the Scala fsc daemon to improve compile times
+//compileScala.scalaCompileOptions.useCompileDaemon=true
+//compileTestScala.scalaCompileOptions.useCompileDaemon=true
 
 dependencies {
 	// Libraries needed to run the scala tools
@@ -18,5 +18,8 @@ dependencies {
 
 	// Libraries needed for scala api
 	compile "org.scala-lang:scala-library:${scalaVersion}"
+
+    testCompile "org.scalatest:scalatest_2.9.0:$scalatestVersion"
+    testCompile 'junit:junit:4.6'
 }
 

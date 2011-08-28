@@ -1,1 +1,10 @@
+bin
+build
+.classpath
 .gradle/
+.project
+.scala_dependencies
+.settings/
+what-to-do-next.iml
+what-to-do-next.ipr
+what-to-do-next.iws
